@@ -1,3 +1,53 @@
+%Acredito q seja assim:
+%Classificação de percevejos
+percevejo('Gelastocoridae') :-
+    tamanho_antenas(curtas),
+    ocelos_presentes(sim).
+
+percevejo('Corixidae') :-
+    tamanho_antenas(curtas),
+    ocelos_presentes(nao),
+    tarsos_anteriores(espatulados).
+
+percevejo('Nepidae') :-
+    tamanho_antenas(curtas),
+    ocelos_presentes(nao),
+    tarsos_anteriores(nao_espatulados),
+    apendice_do_abdomen(tubo_respiratorio).
+
+percevejo('Notonectidae') :-
+    tamanho_antenas(curtas),
+    ocelos_presentes(nao),
+    tarsos_anteriores(nao_espatulados),
+    apendice_do_abdomen(sem_sifao_longo),
+    pernas(anteriores_nao_preensoras_pernas_posteriores_longas).
+
+percevejo('Naucoridae') :-
+    tamanho_antenas(curtas),
+    ocelos_presentes(nao),
+    tarsos_anteriores(nao_espatulados),
+    apendice_do_abdomen(sem_sifao_longo),
+    pernas(ambulatorias_preensoras),
+    membranas_hemielitro_possuem_nervuras(nao).
+
+percevejo('Belostomatidae') :-
+    tamanho_antenas(curtas),
+    ocelos_presentes(nao),
+    tarsos_anteriores(nao_espatulados),
+    apendice_do_abdomen(sem_sifao_longo),
+    pernas(ambulatorias_preensoras),
+    membranas_hemielitro_possuem_nervuras(sim).
+
+%Defini as perguntas
+tamanho_antenas(curtas) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    A == 1.
+
+
+
+
+%=========================================================================================
+
 tamanho_antenas(A) :-
     pergunte(tamanho_antenas, 
     A,
