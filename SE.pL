@@ -1,17 +1,4 @@
 %Acredito q seja assim:
-
-
-Gerridae
-Antenas mais longas que a cabeça
-Coxas medianas mais próximas das posteriores do que das anteriores 
-Garras tarsais das pernas anteriores inseridas antes do ápice do último tarsômero
-
-Veliidae
-Antenas mais longas que a cabeça
-Coxas medianas eqüidistantes das anteriores e posteriores
-Garras tarsais das pernas anteriores inseridas antes do ápice do último tarsômero
-
-
 %Classificação de percevejos
 percevejo('Gelastocoridae') :-
     tamanho_antenas(curtas),
@@ -51,6 +38,74 @@ percevejo('Belostomatidae') :-
     pernas(ambulatorias_preensoras),
     membranas_hemielitro_possuem_nervuras(sim).
 
+%A partir da questão 7 tamanho antenas longas
+percevejo('Gerridae') :-
+    tamanho_antenas(longas),
+    como_sao_garras(garras_tarsais_das_pernasanteriores_inseridas_antes_do_apice_do_ultimo_tarsomero), 
+    coxas_medianas(mais_proximas_das_posteriores_que_das_anteriores).
+
+percevejo('Veliidae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(tarsais_das_pernas_anteriores_inseridas_antes_do_apice_do_ultimo_tarsomero),
+    coxas_medianas(medianas_equidistantes_das_anteriores_e_posteriores).
+    
+
+percevejo('Aradidae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(todas_as_garras_apicais),
+    como_corpo(corpo_deprimido_alongado).
+    
+
+percevejo('Tingidae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(todas_as_garras_apicais),
+    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
+    hemielitros_sao_reticulados(sim_inteiramente).
+
+percevejo('Scutelleridae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(todas_as_garras_apicais),
+    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
+    hemielitros_sao_reticulados(nao_reticulados),
+    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(sim),
+    qual_o_alcance_do_escutelo(escutelo_cobrindo_inteiramente_ou_quase_o_abdomen).
+
+percevejo('Cydnidae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(todas_as_garras_apicais),
+    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
+    hemielitros_sao_reticulados(nao_reticulados),
+    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(sim),
+    qual_o_alcance_do_escutelo(alcançando_no_máximo_o_apice_do_clavo),
+    como_sao_as_pernas_anteriores(fossoriais).
+
+percevejo('Pentatomidae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(todas_as_garras_apicais),
+    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
+    hemielitros_sao_reticulados(nao_reticulados),
+    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(sim),
+    qual_o_alcance_do_escutelo(alcançando_no_máximo_o_apice_do_clavo),
+    como_sao_as_pernas_anteriores(ambulatorias).
+
+percevejo('Cimicidae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(todas_as_garras_apicais),
+    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
+    hemielitros_sao_reticulados(nao_reticulados),
+    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(nao),
+    hemielitros_tem_cuneo(sim),
+    quinzenaosabo().
+
+percevejo('Miridae') :- 
+    tamanho_antenas(longas),
+    como_sao_garras(todas_as_garras_apicais),
+    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
+    hemielitros_sao_reticulados(nao_reticulados),
+    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(nao),
+    hemielitros_tem_cuneo(sim),
+    quinzenaosabo().
+
 %Defini as perguntas
 tamanho_antenas(curtas) :-
     pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
@@ -58,7 +113,7 @@ tamanho_antenas(curtas) :-
 
 %=========================================================================================
 
-tamanho_antenas(A) :-
+/* tamanho_antenas(A) :-
     pergunte(tamanho_antenas, 
     A,
     'Qual o tamanho das antenas em relação a cabeça do inseto?
@@ -184,3 +239,4 @@ ocelos_presentes(A) :-
     A,
     'Qual o tamanho da cabeça?
 Digite 1 para mais estreita e mais curta que o pronoto e 2 para quase tão larga e tão longa quanto o pronoto').
+ */
