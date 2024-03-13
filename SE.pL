@@ -1,4 +1,17 @@
 %Acredito q seja assim:
+
+
+Gerridae
+Antenas mais longas que a cabeça
+Coxas medianas mais próximas das posteriores do que das anteriores 
+Garras tarsais das pernas anteriores inseridas antes do ápice do último tarsômero
+
+Veliidae
+Antenas mais longas que a cabeça
+Coxas medianas eqüidistantes das anteriores e posteriores
+Garras tarsais das pernas anteriores inseridas antes do ápice do último tarsômero
+
+
 %Classificação de percevejos
 percevejo('Gelastocoridae') :-
     tamanho_antenas(curtas),
@@ -42,9 +55,6 @@ percevejo('Belostomatidae') :-
 tamanho_antenas(curtas) :-
     pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
     A == 1.
-
-
-
 
 %=========================================================================================
 
