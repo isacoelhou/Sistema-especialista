@@ -1,242 +1,414 @@
+main :- nl, write('Sistema Especialista de claissficação de Percevejos.'), nl,
+    retractall(fato(_, _)), %limpa a memória
+    investimento(A),
+    write('Segundo as características o percevejo é: '),
+    write(A), nl.
+
 %Acredito q seja assim:
 %Classificação de percevejos
 percevejo('Gelastocoridae') :-
-    tamanho_antenas(curtas),
-    ocelos_presentes(sim).
+    um(op1),
+    dois(op1).
 
 percevejo('Corixidae') :-
-    tamanho_antenas(curtas),
-    ocelos_presentes(nao),
-    tarsos_anteriores(espatulados).
+    um(op1),
+    dois(op2),
+    tres(op1).
 
 percevejo('Nepidae') :-
-    tamanho_antenas(curtas),
-    ocelos_presentes(nao),
-    tarsos_anteriores(nao_espatulados),
-    apendice_do_abdomen(tubo_respiratorio).
+    um(op1),
+    dois(op2),
+    tres(op2),
+    quatro(op1).
 
 percevejo('Notonectidae') :-
-    tamanho_antenas(curtas),
-    ocelos_presentes(nao),
-    tarsos_anteriores(nao_espatulados),
-    apendice_do_abdomen(sem_sifao_longo),
-    pernas(anteriores_nao_preensoras_pernas_posteriores_longas).
+    um(op1),
+    dois(op2),
+    tres(op2),
+    quatro(op2),
+    cinco(op2).
 
 percevejo('Naucoridae') :-
-    tamanho_antenas(curtas),
-    ocelos_presentes(nao),
-    tarsos_anteriores(nao_espatulados),
-    apendice_do_abdomen(sem_sifao_longo),
-    pernas(ambulatorias_preensoras),
-    membranas_hemielitro_possuem_nervuras(nao).
+    um(op1),
+    dois(op2),
+    tres(op2),
+    quatro(op2),
+    cinco(op1),
+    seis(op1).
 
 percevejo('Belostomatidae') :-
-    tamanho_antenas(curtas),
-    ocelos_presentes(nao),
-    tarsos_anteriores(nao_espatulados),
-    apendice_do_abdomen(sem_sifao_longo),
-    pernas(ambulatorias_preensoras),
-    membranas_hemielitro_possuem_nervuras(sim).
+    um(op1),
+    dois(op2),
+    tres(op2),
+    quatro(op2),
+    cinco(op1),
+    seis(op2).
 
-%A partir da questão 7 tamanho antenas longas
+%A partir da questão sete tamanho antenas longas
 percevejo('Gerridae') :-
-    tamanho_antenas(longas),
-    como_sao_garras(garras_tarsais_das_pernasanteriores_inseridas_antes_do_apice_do_ultimo_tarsomero), 
-    coxas_medianas(mais_proximas_das_posteriores_que_das_anteriores).
+    um(op2),
+    sete(op1),
+    oito(op1).
 
 percevejo('Veliidae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(tarsais_das_pernas_anteriores_inseridas_antes_do_apice_do_ultimo_tarsomero),
-    coxas_medianas(medianas_equidistantes_das_anteriores_e_posteriores).
-    
+    um(op2),
+    sete(op1),
+    oito(op2).
 
 percevejo('Aradidae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(todas_as_garras_apicais),
-    como_corpo(corpo_deprimido_alongado).
-    
+    um(op2),
+    sete(op2),
+    nove(op1).
 
 percevejo('Tingidae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(todas_as_garras_apicais),
-    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
-    hemielitros_sao_reticulados(sim_inteiramente).
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op1).
 
 percevejo('Scutelleridae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(todas_as_garras_apicais),
-    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
-    hemielitros_sao_reticulados(nao_reticulados),
-    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(sim),
-    qual_o_alcance_do_escutelo(escutelo_cobrindo_inteiramente_ou_quase_o_abdomen).
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op1),
+    doze(op1).
 
 percevejo('Cydnidae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(todas_as_garras_apicais),
-    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
-    hemielitros_sao_reticulados(nao_reticulados),
-    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(sim),
-    qual_o_alcance_do_escutelo(alcançando_no_máximo_o_apice_do_clavo),
-    como_sao_as_pernas_anteriores(fossoriais).
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op1),
+    doze(op2),
+    treze(op1).
 
 percevejo('Pentatomidae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(todas_as_garras_apicais),
-    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
-    hemielitros_sao_reticulados(nao_reticulados),
-    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(sim),
-    qual_o_alcance_do_escutelo(alcançando_no_máximo_o_apice_do_clavo),
-    como_sao_as_pernas_anteriores(ambulatorias).
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op1),
+    doze(op2),
+    treze(op2).
 
 percevejo('Cimicidae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(todas_as_garras_apicais),
-    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
-    hemielitros_sao_reticulados(nao_reticulados),
-    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(nao),
-    hemielitros_tem_cuneo(sim),
-    quinzenaosabo().
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op1),
+    quinze(op1).
 
 percevejo('Miridae') :- 
-    tamanho_antenas(longas),
-    como_sao_garras(todas_as_garras_apicais),
-    como_corpo(corpo_nao_deprimido_ou_se_deprimido_apresentase_ovalado),
-    hemielitros_sao_reticulados(nao_reticulados),
-    escutelo_estendende_ate_ou_alem_da_metade_do_abdome(nao),
-    hemielitros_tem_cuneo(sim),
-    quinzenaosabo().
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op1),
+    quinze(op2).
 
+percevejo('Phymatidae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op1),
+    dezessete(op1).
+
+percevejo('Ploiariidae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op1),
+    dezessete(op2),
+    dezoito(op1).
+
+
+percevejo('Reduviidae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op1),
+    dezessete(op2),
+    dezoito(op2).
+    
+percevejo('Corizidae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op2),
+    dezenove(op1),
+    vinte(op2).
+    
+percevejo('Coreidae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op2),
+    dezenove(op1),
+    vinte(op1),
+    vinteum(op1).
+
+percevejo('Coriscidae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op2),
+    dezenove(op1),
+    vinte(op1),
+    vinteum(op2).
+
+percevejo('Neididae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op2),
+    dezenove(op2),
+    vintedois(op1).
+
+percevejo('Pyrrhocoridae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op2),
+    dezenove(op2),
+    vintedois(op2),
+    vintetres(op1).
+    
+
+percevejo('Lygaeidae') :- 
+    um(op2),
+    sete(op2),
+    nove(op2),
+    dez(op2),
+    onze(op2),
+    quatorze(op2),
+    dezesseis(op2),
+    dezenove(op2),
+    vintedois(op2),
+    vintetres(op2).
+
+                    
+    
 %Defini as perguntas
-tamanho_antenas(curtas) :-
+um(op1) :-
     pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
     A == 1.
 
-%=========================================================================================
+um(op2) :-
+    A == 2.
 
-/* tamanho_antenas(A) :-
-    pergunte(tamanho_antenas, 
-    A,
-    'Qual o tamanho das antenas em relação a cabeça do inseto?
-Digite 1 para maiores e 2 para menores').
+dois(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-ocelos_presentes(A) :-
-    pergunte(ocelos_presentes, 
-    A,
-    'Os ocelos estão presentes no inseto?
-Digite 1 para sim e 2 não').
+dois(op2) :-
+    A == 2.
 
-tarsos(A) :-
-    pergunte(tarsos, 
-    A,
-    'Como são os tarsos anteriores?
-Digite 1 para espatulados e 2 para não espatulados').
+tres(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-apice_abdominal(A) :-
-    pergunte(apice_abdominal, 
-    A,
-    'Como é o ápice do abdomen?
-Digite 1 para formando um tubo respiratório e 2 para sem sifão longo').
+tres(op2) :-
+    A == 2.
 
-pernas_preensoras(A) :-
-    pergunte(pernas_preensoras, 
-    A,
-    'As pernas do inseto são preensoras?
-Digite 1 para sim e 2 para não, pernas posteriores longas').
+quatro(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-membranas_hemielitro(A) :-
-    pergunte(membranas_hemielitro, 
-    A,
-    'As membranas do hemiélitro possuem nervuras?
-Digite 1 para sim e 2 para não').
+quatro(op2) :-
+    A == 2.
 
-coxas_medianas(A) :-
-    pergunte(coxas_medianas, 
-    A,
-    'Como são as coxas medianas?
-Digite 1 para mais próximas das posteriores do que das anteriores e 2 para eqüidistantes das anteriores e posteriores').
+cinco(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-formato_corpo(A) :-
-    pergunte(formato_corpo, 
-    A,
-    'Como é o formato de seu corpo?
-Digite 1 para deprimido, alongado e 2 para não deprimido ou se deprimido apresenta-se ovalado').
+cinco(op2) :-
+    A == 2.
 
-hemielitro(A) :-
-    pergunte(hemielitro, 
-    A,
-    'Os Hemiélitros são reticulados?
-Digite 1 para sim, inteiramente e 2 para não').
+seis(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-escutelo(A) :-
-    pergunte(escutelo, 
-    A,
-    'O escutelo estendende até ou além da metade do abdome?
-Digite 1 para sim e 2 para não').
+seis(op2) :-
+    A == 2.
 
-alcance_escutelo(A) :-
-    pergunte(alcance_escutelo, 
-    A,
-    'Qual é o alcance do Escutelo?
-Digite 1 para alcançando no máximo o ápice do clavo e 2 para escutelo cobrindo inteiramente ou quase o abdômen').
+sete(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-pernas_anteriores(A) :-
-    pergunte(pernas_anteriores, 
-    A,
-    'Como são as pernas anteriores? 
-Digite 1 para fossisiais e 2 para ambulatórias').
+sete(op2) :-
+    A == 2.
 
-hemiélitro_cuneo(A) :-
-    pergunte(hemiélitro_cuneo, 
-    A,
-    'Hemiélitros tem cúneo?
-Digite 1 para sim e 2 para não').
- 
-### FALTANDO A QUESTAO 15
-rostro(A) :-
-    pergunte(rostro, 
-    A,
-    'Como é o rostro?
-Digite 1 para Curto, grosso e 2 para longo').
+oito(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-antenomero_femur(A) :-
-    pergunte(antenomero_femur, 
-    A,
-    'Como são o 4º antenômero e fêmur anterior?
-Digite 1 para 4º antenômero clavado ou fusiforme; fêmur anterior muito dilatado e 2 para 4º antenômero não espessado; fêmures anteriores pouco dilatados').
+oito(op2) :-
+    A == 2.
 
-corpo_pernas(A) :-
-    pergunte(corpo_pernas, 
-    A,
-    ' Como é o corpo? E as pernas?
-Digite 1 para Corpo muito fino, pernas medianas e posteriores muito alongadas e finas e 2 para corpo de forma diferente; pernas normais; hemiélitros divididos em cório e clavo').
+nove(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-nervuras_hemitelitro(A) :-
-    pergunte(nervuras_hemitelitro, 
-    A,
-    'Quantas nervuras o membrana do hemiélitro tem?
-Digite 1 para mais de 7 e 2 para menos de 7').
+nove(op2) :-
+    A == 2.
 
-glandulas_odoriferas(A) :-
-    pergunte(glandulas_odoriferas, 
-    A,
-    ' Glândulas odoríferas presentes?
-Digite 1 para sim e 2 para não').
+dez(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-tamanho_cabeca(A) :-
-    pergunte(tamanho_cabeca, 
-    A,
-    'Qual o tamanho da cabeça?
-Digite 1 para mais estreita e mais curta que o pronoto e 2 para quase tão larga e tão longa quanto o pronoto').
+dez(op2) :-
+    A == 2.
 
-caracteristicas(A) :-
-    pergunte(caracteristicas, 
-    A,
-    'Corpo estreito; apêndices longos e finos; 1º antenômero e fêmures dilatados no ápice?
-Digite 1 para sim e 2 para não').
+onze(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
 
-ocelos_presentes(A) :-
-    pergunte(tamanho_cabeca, 
-    A,
-    'Qual o tamanho da cabeça?
-Digite 1 para mais estreita e mais curta que o pronoto e 2 para quase tão larga e tão longa quanto o pronoto').
- */
+onze(op2) :-
+    A == 2.
+
+doze(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+doze(op2) :-
+    A == 2.
+
+treze(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+treze(op2) :-
+    A == 2.
+
+quatorze(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+quatorze(op2) :-
+    A == 2.
+
+quinze(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+quinze(op2) :-
+    A == 2.
+
+dezesseis(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+dezesseis(op2) :-
+    A == 2.
+
+dezessete(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+dezessete(op2) :-
+    A == 2.
+
+dezoito(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+dezoito(op2) :-
+    A == 2.
+
+dezenove(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+dezenove(op2) :-
+    A == 2.
+
+vinte(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+vinte(op2) :-
+    A == 2.
+
+vinteum(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+vinteum(op2) :-
+    A == 2.
+
+vintedois(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+vintedois(op2) :-
+    A == 2.
+
+vintetres(op1) :-
+    pergunte(tamanho_antenas, A, 'Qual o tamanho das antenas em relação a cabeça'),
+    nl, write('opcao 1'), nl, write('op2'),
+    A == 1.
+
+vintetres(op2) :-
+    A == 2.
+
+
+pergunte(Atributo, Valor, Texto) :-
+    fato(Atributo, Valor), !.
+
+pergunte(Atributo, Valor, Texto) :-
+    fato(Atributo, Valor), !, fail.
+
+pergunte(A, V, Texto) :-
+    nl, write(Texto), write('> '),
+    read(V), nl,
+    asserta(fato(A,V)).
