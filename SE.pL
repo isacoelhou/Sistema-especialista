@@ -9,7 +9,7 @@ main :- nl, write('Sistema Especialista de classificacao de Percevejos.'), nl,
     write('Segundo as caracteristicas o percevejo eh: '),
     write(A), nl.
 
-% Definicao d
+% Definicao das caracteristicas que são necessarias para a identificacao de um percevejo em determinada familia:
 percevejo('Gelastocoridae') :-
     um(op1),
     dois(op1).
@@ -48,7 +48,6 @@ percevejo('Belostomatidae') :-
     cinco(op1),
     seis(op2).
 
-%A partir da questao sete tamanho antenas longas
 percevejo('Gerridae') :-
     um(op2),
     sete(op1),
@@ -219,8 +218,8 @@ percevejo('Lygaeidae') :-
     vintetres(op2).
 
                     
-    
-%Defini as perguntas
+%Perguntas para determinar caracteristicas
+%Cada pergunta esta registrada duas vezes, pois cada variavel pode assumir o valor da op1 ou op2
 um(op1) :-
     pergunte(um, A, 'Qual o tamanho das antenas em relacao a cabeca?
     opcao 1: Antenas mais curtas que a cabeca, geralmente ocultas em cavidades perto dos olhos    
@@ -543,13 +542,14 @@ vintetres(op2) :-
         '),
     A >= 2.
 
-
+%Caso não satisfaca opcao 1 então é a 2
 pergunte(Atributo, Valor, Texto) :-
     fato(Atributo, Valor), !.
 
 pergunte(Atributo, Valor, Texto) :-
     fato(Atributo, Valor), !, fail.
 
+%Organizacao das perguntas na tela para o usuario
 pergunte(A, V, Texto) :-
     nl, write(Texto), write('> '),
     read(V), nl,
