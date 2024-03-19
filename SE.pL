@@ -1,7 +1,7 @@
 main :- nl, write('Sistema Especialista de claissficacao de Percevejos.'), nl,
     retractall(fato(_, _)), %limpa a memoria
     percevejo(A),
-    write('Segundo as caracteristicas o percevejo e: '),
+    write('Segundo as caracteristicas o percevejo eh: '),
     write(A), nl.
 
 %Acredito q seja assim:
