@@ -1,11 +1,15 @@
-main :- nl, write('Sistema Especialista de claissficacao de Percevejos.'), nl,
+% Leonardo Calsavara
+% Isadora Coelho
+% Igor Kaiser
+
+main :- nl, write('Sistema Especialista de classificacao de Percevejos.'), nl,
+    write('Responda de acordo com a morfologia de seu percevejo, digitando 1 para opcao 1 e 2 para opcao 2'), nl,
     retractall(fato(_, _)), %limpa a memoria
     percevejo(A),
     write('Segundo as caracteristicas o percevejo eh: '),
     write(A), nl.
 
-%Acredito q seja assim:
-%Classificacao de percevejos
+% Definicao d
 percevejo('Gelastocoridae') :-
     um(op1),
     dois(op1).
