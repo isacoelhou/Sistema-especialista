@@ -1,0 +1,12 @@
+Integrantes: Leonardo Calsavara, Isadora Coelho e Igor Kaiser;
+
+Para executar o sistema especialista é necessário ter o swi-prolog instalado em sua máquina;
+
+Passo 1: Ao executar o prolog acesse a aba "file" e clique em "consult", em seguida selecione o arquivo "SE.pl".
+    obs: Como bisto em sala, é esperado dois erros de sintaxe, mas nenhum deles influência na execução do código.
+
+Passo 2: Agora com o arquivo compilado digite "main." para iniciar o sistema.
+
+Passo 3: Responda as perguntas selecionando 1 ou 2, lembre-se sempre de incluir o caractere . no fim de cada entrada.
+
+Passo 4: Ao obter uma resposta o programa se encerra, para inicar novamente realize o Passo 2.
