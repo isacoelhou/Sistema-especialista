@@ -3,7 +3,7 @@
 % Igor Kaiser
 
 main :- nl, write('Sistema Especialista de classificacao de familias de Percevejos.'), nl,
-    write('Responda de acordo com a morfologia de seu percevejo, digitando 1 para opcao 1 e 2 para opcao 2 (lembresse que o prolog so reconhce uma entrega com o caractere . no fim)'), nl,
+    write('Responda de acordo com a morfologia de seu percevejo, digitando 1 para opcao 1 e 2 para opcao 2 (lembresse que o prolog so reconhce uma entreda com o caractere . no fim)'), nl,
     retractall(fato(_, _)), %limpa a memoria
     percevejo(A),
     write('Segundo as caracteristicas a familia do percevejo eh: '),
